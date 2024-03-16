@@ -1,0 +1,29 @@
+{
+  "name": "com.inworld.unity.core",
+  "version": "3.3.0",
+  "displayName": "Inworld.AI",
+  "description": "Elevate NPCs beyond simple dialogue trees with AI characters that can mimic human expression. Give NPCs unscripted dialogue, EQ, and contextual awareness for a much more immersive gaming experience.",
+  "unity": "2022.3",
+  "keywords": [
+    "AI",
+    "RPG",
+    "dialogue",
+    "chat",
+    "chatGPT",
+    "text-to-speech",
+    "voice",
+    "conversation",
+    "chatbot"
+  ],
+  "dependencies": {
+    "com.unity.cloud.gltfast": "6.0.1",
+    "com.unity.textmeshpro": "3.0.6"
+  },
+  "type": "library",
+  "unityRelease": "48f1",
+  "repository": {
+    "url": "git@github.com:inworld-ai/inworld-unity-core.git",
+    "type": "git",
+    "revision": "7d98998246bce5bbcdcad16ed52812f3739c340b"
+  }
+}
