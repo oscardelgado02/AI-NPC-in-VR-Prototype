@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ChatScene.unity
+- path: Assets/Scenes/OfflineAIChat.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

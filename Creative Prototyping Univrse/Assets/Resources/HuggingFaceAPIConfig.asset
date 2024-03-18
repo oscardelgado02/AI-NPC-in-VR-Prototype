@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e4a11424bacd4418fb6c47ff99b12a, type: 3}
   m_Name: HuggingFaceAPIConfig
   m_EditorClassIdentifier: 
-  _apiKey: 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
+  _apiKey: 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
   _useBackupEndpoints: 1
   _waitForModel: 1
   _maxTimeout: 3
