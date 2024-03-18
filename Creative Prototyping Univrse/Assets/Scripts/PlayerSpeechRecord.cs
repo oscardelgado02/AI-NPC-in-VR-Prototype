@@ -15,7 +15,7 @@ public class PlayerSpeechRecord : MonoBehaviour
     [StringInList(typeof(PropertyDrawersHelper), "MicrophoneOptions")]
     public string microphoneOption;
 
-    private AudioClip microphoneClip;
+    public static AudioClip microphoneClip;
     private bool speechClipRecording = false;
 
     [SerializeField] private int maxSecondsTalking = 5;
@@ -36,13 +36,15 @@ public class PlayerSpeechRecord : MonoBehaviour
         timerBeingSilent = Timers.Instance.CreateTimer(true);
 
         RecordLoudness();
+
+        //We init the models
+        SpeechToAnswerSystem.Instance.InitModels(GetSampleDataFromMicrophone(), microphoneClip.channels);
     }
 
     private void Update()
     {
-        if (!Microphone.IsRecording(microphoneOption))
+        if (Microphone.GetPosition(microphoneOption) >= microphoneClip.samples)
         {
-            microphoneClip = null;
             RecordLoudness();
         }
 
@@ -54,12 +56,11 @@ public class PlayerSpeechRecord : MonoBehaviour
 
         if (speechClipRecording)
         {
-            if (GetIfLoudnessGreaterThanThreshold())
+            if (Timers.Instance.WaitTime(timerTalking, maxSecondsTalking))
+                SendAudioAndDetectAgain();
+            else if (GetIfLoudnessGreaterThanThreshold())
                 Timers.Instance.ResetTimer(timerBeingSilent);
             else if (Timers.Instance.WaitTime(timerBeingSilent, maxSecondsBeingSilent))
-                SendAudioAndDetectAgain();
-
-            if (Timers.Instance.WaitTime(timerTalking, maxSecondsTalking))
                 SendAudioAndDetectAgain();
         }
 
@@ -78,12 +79,14 @@ public class PlayerSpeechRecord : MonoBehaviour
         Timers.Instance.ResetTimer(timerBeingSilent);
 
         ProcessAudio();
+        RecordLoudness();
     }
 
     //-------------Loudness Detection---------------
 
     private void RecordLoudness()
     {
+        Microphone.End(microphoneOption);
         microphoneClip = Microphone.Start(microphoneOption, false, 20, AudioSettings.outputSampleRate);
     }
 
@@ -121,16 +124,22 @@ public class PlayerSpeechRecord : MonoBehaviour
 
     //-------------Process Speech---------------
 
+    private float[] GetSampleDataFromMicrophone()
+    {
+        float[] samples = new float[(microphoneClip.samples - Microphone.GetPosition(microphoneOption)) * microphoneClip.channels];
+        microphoneClip.GetData(samples, startPositionClip);
+        return samples;
+    }
+
     private void ProcessAudio()
     {
         // Extract sub-audio clip starting from the beginning of the recorded clip
-        //AudioClip subClip = AudioClip.Create("SubClip", microphoneClip.samples - Microphone.GetPosition(microphoneOption), microphoneClip.channels, microphoneClip.frequency, false);
-        float[] samples = new float[(microphoneClip.samples - Microphone.GetPosition(microphoneOption)) * microphoneClip.channels];
-        microphoneClip.GetData(samples, startPositionClip);
-        //subClip.SetData(samples, 0);
+        AudioClip subClip = AudioClip.Create("SubClip", microphoneClip.samples - Microphone.GetPosition(microphoneOption), microphoneClip.channels, microphoneClip.frequency, false);
+        float[] samples = GetSampleDataFromMicrophone();
+        subClip.SetData(samples, 0);
 
-        //audioSource.clip = subClip;
-        //audioSource.Play();
+        audioSource.clip = subClip;
+        audioSource.Play();
 
         SpeechToAnswerSystem.Instance.ListenPlayer(samples, AudioSettings.outputSampleRate, microphoneClip.channels);
     }

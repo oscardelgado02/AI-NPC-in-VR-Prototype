@@ -11,7 +11,7 @@ public class SpeechToAnswerSystem
     //Singleton
     private SpeechToAnswerSystem()
     {
-        conversation = new Conversation();
+        //conversation = new Conversation();
     }
 
     private static SpeechToAnswerSystem instance;
@@ -27,8 +27,60 @@ public class SpeechToAnswerSystem
         }
     }
 
-    private Conversation conversation;
-    public bool audioProcessing = false;
+    //private Conversation conversation;
+    public bool audioProcessing = true;
+
+    private bool[] modelInitialization = new bool[] { false, false };
+    private enum modelsIdx
+    {
+        speechRecognition,
+        textGeneration
+    }
+
+    public void InitModels(float[] samples, int numChannels)
+    {
+        //Speech Recognition
+        InitSpeechRecognition(samples, numChannels);
+
+        //Text Generation
+        InitTextGeneration();
+    }
+
+    private void InitSpeechRecognition(float[] samples, int numChannels)
+    {
+        HuggingFaceAPI.AutomaticSpeechRecognition(EncodeAsWAV(samples, AudioSettings.outputSampleRate, numChannels), response => {
+            Debug.Log("SpeechRecognition initialized");
+            modelInitialization[(int)modelsIdx.speechRecognition] = true;
+            StartPlayerInteraction();
+        }, error => {
+            Debug.Log("SpeechRecognition NOT initialized");
+            InitSpeechRecognition(samples, numChannels);
+        });
+    }
+
+    private void InitTextGeneration()
+    {
+        HuggingFaceAPI.TextGeneration("From now on, start talking as if you were a celtic from the 55 BC. Don't get off script.", response =>
+        {
+            Debug.Log($"TextGeneration initialized");
+            modelInitialization[(int)modelsIdx.textGeneration] = true;
+            StartPlayerInteraction();
+        }, error =>
+        {
+            Debug.Log("TextGeneration NOT initialized");
+            InitTextGeneration();
+        });
+    }
+
+    private void StartPlayerInteraction()
+    {
+        bool status = false;
+        foreach(bool modelStatus in modelInitialization)
+        {
+            status |= !modelStatus;
+        }
+        audioProcessing = status;
+    }
 
     public void ListenPlayer(float[] inputAudio, int frequency, int channels)
     {
@@ -36,6 +88,7 @@ public class SpeechToAnswerSystem
         string speechToTextResult = string.Empty;
         HuggingFaceAPI.AutomaticSpeechRecognition(EncodeAsWAV(inputAudio, frequency, channels), response => {
             speechToTextResult = response;
+            Debug.Log($"User: {speechToTextResult}");
             GenerateBotAnswer(speechToTextResult);
         }, error => {
             audioProcessing = false; //Break the process
@@ -44,8 +97,6 @@ public class SpeechToAnswerSystem
 
     private void GenerateBotAnswer(string inputText)
     {
-        string conversationOutput = string.Empty;
-
         if (string.IsNullOrEmpty(inputText))
         {
             //We break the wait
@@ -56,16 +107,16 @@ public class SpeechToAnswerSystem
         //En caso de que si que se entienda la frase
         else
         {
-            //HuggingFaceAPI.Conversation(inputText, response => {
-            //    string reply = response;
-            //    Debug.Log(reply);
-            //}, error => {
-            //});
-            conversationOutput = "Answer to question: " + inputText;
-            Debug.Log(conversationOutput);
-
-            //We break the wait
-            audioProcessing = false;
+            string conversationOutput = string.Empty;
+            HuggingFaceAPI.TextGeneration(inputText, response =>
+            {
+                conversationOutput = response;
+                Debug.Log($"NPC: {conversationOutput}");
+                audioProcessing = false; //Break the process
+            }, error =>
+            {
+                audioProcessing = false; //Break the process
+            });
         }
     }
 
