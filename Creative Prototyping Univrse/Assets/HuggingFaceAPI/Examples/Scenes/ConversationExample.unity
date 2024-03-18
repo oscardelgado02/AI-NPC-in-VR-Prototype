@@ -1153,9 +1153,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 891979040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7c6abf60b875a94c8fa75eaddcef662, type: 3}
+  m_Script: {fileID: 11500000, guid: eb33a852043880e46b325c3c42776c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 507951892}
+  conversationText: {fileID: 1095313217}
+  inputField: {fileID: 1049020039}
+  sendButton: {fileID: 32373832}
+  clearButton: {fileID: 1089463482}
+  userTextColor: {r: 0, g: 0, b: 1, a: 1}
+  botTextColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &909252949
 GameObject:
   m_ObjectHideFlags: 0

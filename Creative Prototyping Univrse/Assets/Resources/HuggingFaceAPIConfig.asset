@@ -15,7 +15,7 @@ MonoBehaviour:
   _apiKey: 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
   _useBackupEndpoints: 1
   _waitForModel: 1
-  _maxTimeout: 3
+  _maxTimeout: 5
   _taskEndpoints:
   - taskName: AutomaticSpeechRecognition
     endpoint: https://api-inference.huggingface.co/models/openai/whisper-tiny
