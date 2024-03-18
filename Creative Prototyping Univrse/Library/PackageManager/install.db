@@ -1,13 +1,4 @@
 {
   "schemaVersion": 1,
-  "packages": {
-    "com.inworld.unity.core": {
-      "tarball": {
-        "hash": "914407c8e850",
-        "mtime": 1710210389000,
-        "size": 329742,
-        "localPath": "E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Assets\\Inworld\\com.inworld.unity.core-3.3.0.tgz"
-      }
-    }
-  }
+  "packages": {}
 }

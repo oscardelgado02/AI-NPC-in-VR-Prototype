@@ -7,45 +7,50 @@ using UnityEngine;
 using UnityEngine.UI;
 using SpeechLib;
 
-public class SpeechToAnswerSystem
+public class SpeechToAnswerSystem : MonoBehaviour
 {
-    //Singleton
-    private SpeechToAnswerSystem()
+    private enum popUpsIdx
     {
-        //conversation = new Conversation();
+        listening,
+        processing,
+        speaking
     }
-
-    private static SpeechToAnswerSystem instance;
-    public static SpeechToAnswerSystem Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = new SpeechToAnswerSystem();
-            }
-            return instance;
-        }
-    }
+    [SerializeField] private List<GameObject> uiPopUps;
 
     //private Conversation conversation;
     public SpVoice voice = new SpVoice();
     public bool audioProcessing = true;
+    private bool initialConversation = false;
 
-    private bool[] modelInitialization = new bool[] { false, false };
     private enum modelsIdx
     {
         speechRecognition,
-        textGeneration
+        translationES_EN,
+        textGeneration,
+        translationEN_ES
+    }
+    private bool[] modelInitialization = new bool[] { false, false, false, false };
+
+    public void InitNPC(float[] samples, int numChannels)
+    {
+        InitModels(samples, numChannels);
+
+        foreach (GameObject popUp in uiPopUps)
+        {
+            popUp.SetActive(false);
+        }
     }
 
-    public void InitModels(float[] samples, int numChannels)
+    private void InitModels(float[] samples, int numChannels)
     {
         //Speech Recognition
         InitSpeechRecognition(samples, numChannels);
 
         //Text Generation
         InitTextGeneration();
+
+        //Translator from spanish to english
+        InitTranslation_ES_EN();
     }
 
     private void InitSpeechRecognition(float[] samples, int numChannels)
@@ -74,6 +79,20 @@ public class SpeechToAnswerSystem
         });
     }
 
+    private void InitTranslation_ES_EN()
+    {
+        HuggingFaceAPI.Translation("Hola", response =>
+        {
+            Debug.Log($"Translation_ES_EN initialized");
+            modelInitialization[(int)modelsIdx.translationEN_ES] = true;
+            StartPlayerInteraction();
+        }, error =>
+        {
+            Debug.Log("Translation_ES_EN NOT initialized");
+            InitTextGeneration();
+        });
+    }
+
     private void StartPlayerInteraction()
     {
         bool status = false;
@@ -84,9 +103,20 @@ public class SpeechToAnswerSystem
         audioProcessing = status;
     }
 
+    public void GenerateInitialConversation()
+    {
+        if (!initialConversation)
+        {
+            initialConversation = true;
+            audioProcessing = true;
+            GenerateBotAnswer("Hello!");
+        }
+    }
+
     public void ListenPlayer(float[] inputAudio, int frequency, int channels)
     {
         audioProcessing = true;
+        ActivatePopUp((int)popUpsIdx.listening);
         string speechToTextResult = string.Empty;
         HuggingFaceAPI.AutomaticSpeechRecognition(EncodeAsWAV(inputAudio, frequency, channels), response => {
             speechToTextResult = response;
@@ -109,13 +139,13 @@ public class SpeechToAnswerSystem
         //En caso de que si que se entienda la frase
         else
         {
+            ActivatePopUp((int)popUpsIdx.processing);
             string conversationOutput = string.Empty;
             HuggingFaceAPI.TextGeneration(inputText, response =>
             {
                 conversationOutput = response;
                 Debug.Log($"NPC: {conversationOutput}");
                 AnswerToPlayer(conversationOutput);   //Sound of the npc
-                audioProcessing = false; //Break the process
             }, error =>
             {
                 audioProcessing = false; //Break the process
@@ -125,10 +155,15 @@ public class SpeechToAnswerSystem
 
     private void AnswerToPlayer(string inputText)
     {
-        if (!string.IsNullOrEmpty(inputText))
+        HuggingFaceAPI.Translation(inputText, response =>
         {
-            voice.Speak(inputText, SpeechVoiceSpeakFlags.SVSFlagsAsync | SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak);
-        }
+            audioProcessing = false; //Break the process
+            ActivatePopUp((int)popUpsIdx.speaking);
+            voice.Speak(response, SpeechVoiceSpeakFlags.SVSFlagsAsync | SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak);
+        }, error =>
+        {
+            audioProcessing = false; //Break the process
+        });
     }
 
     private byte[] EncodeAsWAV(float[] samples, int frequency, int channels)
@@ -162,6 +197,15 @@ public class SpeechToAnswerSystem
 
     public void MuteVoice()
     {
+        ActivatePopUp(-1);
         voice.Skip("Sentence", int.MaxValue);
+    }
+
+    private void ActivatePopUp(int idx)
+    {
+        for (int i = 0; i < uiPopUps.Count; i++)
+        {
+            uiPopUps[i].SetActive(i == idx);
+        }
     }
 }

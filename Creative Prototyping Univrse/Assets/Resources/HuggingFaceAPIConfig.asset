@@ -26,14 +26,14 @@ MonoBehaviour:
   - taskName: SentenceSimilarity
     endpoint: https://api-inference.huggingface.co/models/sentence-transformers/all-MiniLM-L6-v2
   - taskName: Summarization
-    endpoint: https://api-inference.huggingface.co/models/facebook/bart-large-cnn
+    endpoint: https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-es-en
   - taskName: TextClassification
     endpoint: https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english
   - taskName: TextGeneration
-    endpoint: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2
+    endpoint: https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill
   - taskName: TextToImage
     endpoint: https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5
   - taskName: Translation
-    endpoint: https://api-inference.huggingface.co/models/t5-base
+    endpoint: https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-en-es
   - taskName: ZeroShotTextClassification
     endpoint: https://api-inference.huggingface.co/models/facebook/bart-large-mnli

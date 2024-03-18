@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/OfflineAIChat.unity
+- path: Assets/Scenes/HuggingFaceChat.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

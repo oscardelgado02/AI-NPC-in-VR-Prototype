@@ -354,10 +354,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"E:/UnityEditor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"E:/UnityEditor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Library/PackageCache/com.unity.mathematics@1.3.1/Unity.Mathematics.Editor/MatrixDrawer.cs"
-"Library/PackageCache/com.unity.mathematics@1.3.1/Unity.Mathematics.Editor/PostNormalizedVectorDrawer.cs"
-"Library/PackageCache/com.unity.mathematics@1.3.1/Unity.Mathematics.Editor/PrimitiveVectorDrawer.cs"
-"Library/PackageCache/com.unity.mathematics@1.3.1/Unity.Mathematics.Editor/QuaternionDrawer.cs"
+"Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics.Editor/MatrixDrawer.cs"
+"Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics.Editor/PostNormalizedVectorDrawer.cs"
+"Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics.Editor/PrimitiveVectorDrawer.cs"
+"Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics.Editor/QuaternionDrawer.cs"
 -langversion:9.0
 /unsafe+
 /deterministic

@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class PlayerSpeechRecord : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI textDebug;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private int sampleWindow = 64;
     [SerializeField] private float loudnessSensibility = 10f;
@@ -26,9 +25,14 @@ public class PlayerSpeechRecord : MonoBehaviour
 
     private int startPositionClip = 0;
 
+    [SerializeField] private GameObject npc;
+    [SerializeField] private SpeechToAnswerSystem npcConversationalSystem;
+
+    [SerializeField] private float distanceInteractionNPC = 2f;
+
     private void Start()
     {
-        if (microphoneOption != null || microphoneOption == "") { Debug.Log("Selected option: " + microphoneOption); }
+        if (!string.IsNullOrEmpty(microphoneOption)) { Debug.Log("Selected option: " + microphoneOption); }
         else { microphoneOption = Microphone.devices[0]; }
 
         //We init the timers
@@ -38,23 +42,27 @@ public class PlayerSpeechRecord : MonoBehaviour
         RecordLoudness();
 
         //We init the models
-        SpeechToAnswerSystem.Instance.InitModels(GetSampleDataFromMicrophone(), microphoneClip.channels);
+        npcConversationalSystem.InitNPC(GetSampleDataFromMicrophone(), microphoneClip.channels);
     }
 
     private void Update()
     {
+        bool getIfLookingNPC = GetIfLookingAtNPC(); bool getIfNearNPC = GetIfNearNPC();
         if (Microphone.GetPosition(microphoneOption) >= microphoneClip.samples)
         {
             RecordLoudness();
         }
 
-        if (!SpeechToAnswerSystem.Instance.audioProcessing && !speechClipRecording && GetIfLoudnessGreaterThanThreshold())
+        if (getIfNearNPC)
+            npcConversationalSystem.GenerateInitialConversation();
+
+        if (!npcConversationalSystem.audioProcessing && !speechClipRecording && GetIfLoudnessGreaterThanThreshold() && getIfLookingNPC && getIfNearNPC)
         {
             speechClipRecording = true;
             startPositionClip = Microphone.GetPosition(microphoneOption);
 
             //Mute the npc
-            SpeechToAnswerSystem.Instance.MuteVoice();
+            npcConversationalSystem.MuteVoice();
         }
 
         if (speechClipRecording)
@@ -66,12 +74,6 @@ public class PlayerSpeechRecord : MonoBehaviour
             else if (Timers.Instance.WaitTime(timerBeingSilent, maxSecondsBeingSilent))
                 SendAudioAndDetectAgain();
         }
-
-        //Just for debugging
-        if (!SpeechToAnswerSystem.Instance.audioProcessing && GetIfLoudnessGreaterThanThreshold())
-            textDebug.text = "Talking";
-        else
-            textDebug.text = "No Talking";
     }
 
     private void SendAudioAndDetectAgain()
@@ -144,12 +146,42 @@ public class PlayerSpeechRecord : MonoBehaviour
         //audioSource.clip = subClip;
         //audioSource.Play();
 
-        SpeechToAnswerSystem.Instance.ListenPlayer(samples, AudioSettings.outputSampleRate, microphoneClip.channels);
+        npcConversationalSystem.ListenPlayer(samples, AudioSettings.outputSampleRate, microphoneClip.channels);
+    }
+
+    //-------------Detect if we are interacting with the NPC---------------
+
+    private bool GetIfLookingAtNPC()
+    {
+        RaycastHit[] hits;
+
+        // Calculate direction of the raycast based on camera's forward vector
+        Vector3 raycastDirection = Camera.main.transform.forward;
+
+        // Perform a spherecast to simulate a limited FOV
+        hits = Physics.SphereCastAll(Camera.main.transform.position, 0.1f, raycastDirection, distanceInteractionNPC);
+
+        // Check all hits to see if any intersect with the object
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.collider != null && hit.collider.gameObject == npc) // Replace gameObject with the object you want to check
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private bool GetIfNearNPC()
+    {
+        float distanceToNPC = Vector3.Distance(this.transform.position, npc.transform.position);
+        return distanceToNPC < distanceInteractionNPC;
     }
 
     private void OnApplicationQuit()
     {
         //Mute the npc
-        SpeechToAnswerSystem.Instance.MuteVoice();
+        npcConversationalSystem.MuteVoice();
     }
 }
