@@ -52,6 +52,9 @@ public class PlayerSpeechRecord : MonoBehaviour
         {
             speechClipRecording = true;
             startPositionClip = Microphone.GetPosition(microphoneOption);
+
+            //Mute the npc
+            SpeechToAnswerSystem.Instance.MuteVoice();
         }
 
         if (speechClipRecording)
@@ -134,13 +137,19 @@ public class PlayerSpeechRecord : MonoBehaviour
     private void ProcessAudio()
     {
         // Extract sub-audio clip starting from the beginning of the recorded clip
-        AudioClip subClip = AudioClip.Create("SubClip", microphoneClip.samples - Microphone.GetPosition(microphoneOption), microphoneClip.channels, microphoneClip.frequency, false);
+        //AudioClip subClip = AudioClip.Create("SubClip", microphoneClip.samples - Microphone.GetPosition(microphoneOption), microphoneClip.channels, microphoneClip.frequency, false);
         float[] samples = GetSampleDataFromMicrophone();
-        subClip.SetData(samples, 0);
+        //subClip.SetData(samples, 0);
 
-        audioSource.clip = subClip;
-        audioSource.Play();
+        //audioSource.clip = subClip;
+        //audioSource.Play();
 
         SpeechToAnswerSystem.Instance.ListenPlayer(samples, AudioSettings.outputSampleRate, microphoneClip.channels);
+    }
+
+    private void OnApplicationQuit()
+    {
+        //Mute the npc
+        SpeechToAnswerSystem.Instance.MuteVoice();
     }
 }

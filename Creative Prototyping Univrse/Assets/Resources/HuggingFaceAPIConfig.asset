@@ -30,7 +30,7 @@ MonoBehaviour:
   - taskName: TextClassification
     endpoint: https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english
   - taskName: TextGeneration
-    endpoint: https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill
+    endpoint: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2
   - taskName: TextToImage
     endpoint: https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5
   - taskName: Translation

@@ -5,6 +5,7 @@ using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using SpeechLib;
 
 public class SpeechToAnswerSystem
 {
@@ -28,6 +29,7 @@ public class SpeechToAnswerSystem
     }
 
     //private Conversation conversation;
+    public SpVoice voice = new SpVoice();
     public bool audioProcessing = true;
 
     private bool[] modelInitialization = new bool[] { false, false };
@@ -60,7 +62,7 @@ public class SpeechToAnswerSystem
 
     private void InitTextGeneration()
     {
-        HuggingFaceAPI.TextGeneration("From now on, start talking as if you were a celtic from the 55 BC. Don't get off script.", response =>
+        HuggingFaceAPI.TextGeneration("Hola", response =>
         {
             Debug.Log($"TextGeneration initialized");
             modelInitialization[(int)modelsIdx.textGeneration] = true;
@@ -112,6 +114,7 @@ public class SpeechToAnswerSystem
             {
                 conversationOutput = response;
                 Debug.Log($"NPC: {conversationOutput}");
+                AnswerToPlayer(conversationOutput);   //Sound of the npc
                 audioProcessing = false; //Break the process
             }, error =>
             {
@@ -124,7 +127,7 @@ public class SpeechToAnswerSystem
     {
         if (!string.IsNullOrEmpty(inputText))
         {
-
+            voice.Speak(inputText, SpeechVoiceSpeakFlags.SVSFlagsAsync | SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak);
         }
     }
 
@@ -155,5 +158,10 @@ public class SpeechToAnswerSystem
             }
             return memoryStream.ToArray();
         }
+    }
+
+    public void MuteVoice()
+    {
+        voice.Skip("Sentence", int.MaxValue);
     }
 }
