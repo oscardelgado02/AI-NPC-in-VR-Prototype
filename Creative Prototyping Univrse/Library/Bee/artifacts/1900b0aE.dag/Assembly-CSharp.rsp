@@ -390,6 +390,8 @@
 "Assets/Scripts/AudioClipSaver.cs"
 "Assets/Scripts/DropdownEditor/PropertyDrawersHelper.cs"
 "Assets/Scripts/DropdownEditor/StringInListDrawer.cs"
+"Assets/Scripts/ElevenLabsAPI.cs"
+"Assets/Scripts/GameController.cs"
 "Assets/Scripts/PlayerSpeechRecord.cs"
 "Assets/Scripts/PopUp.cs"
 "Assets/Scripts/Settings.cs"

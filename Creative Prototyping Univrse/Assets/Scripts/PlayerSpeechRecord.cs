@@ -62,7 +62,7 @@ public class PlayerSpeechRecord : MonoBehaviour
             startPositionClip = Microphone.GetPosition(microphoneOption);
 
             //Mute the npc
-            npcConversationalSystem.MuteVoice();
+            npcConversationalSystem.StopNPCVoice();
         }
 
         if (speechClipRecording)
@@ -183,6 +183,6 @@ public class PlayerSpeechRecord : MonoBehaviour
     private void OnApplicationQuit()
     {
         //Mute the npc
-        npcConversationalSystem.MuteVoice();
+        npcConversationalSystem.StopNPCVoice();
     }
 }

@@ -26,13 +26,23 @@ public class SpeechToAnswerSystem : MonoBehaviour
     //ChatGPT Models
     private OpenAIApi openai = new OpenAIApi();
     private List<ChatMessage> messages = new List<ChatMessage>();
-    private string prompt = "Actua como un romano del 53 AC. Te llamas Atreus y tienes que hablar conmigo usando frases cortas y humoristicas. " +
-        "No rompas el personaje. Nunca menciones que eres un modelo de IA.";
+    private string prompt = "A partir de ahora, eres un romano del año 53 AC. Te llamas Atreus, y tienes un buen sentido del humor. " +
+        "No introduzcas nunca números en el texto, si quieres decir un número, hazlo con palabras. Por ejemplo, en vez de 53, escribe cincuenta y tres. " +
+        "Utiliza frases cortas. " +
+        "No rompas el personaje. No sabes nada acerca del futuro, ni siquiera en que año estás, solo que un loco de la plaza duce que es el año 53 antes de Cristo," +
+        " pero nadie sabe quien es Cristo. También crees que yo también soy otro ciudadano más. No digas que pertenecemos al pasado, vivelo como si para ti fuese el presente. " +
+        "Nunca menciones que eres un modelo de IA. Ahora, presentate después de la frase que te diré a continuación.";
+
+    //ElevenLabs API
+    [SerializeField] private ElevenlabsAPI elevenlabsAPI;
 
     //Hugging Face Models
     //private Conversation conversation;
     private enum hfModelsIdx { speechRecognition, textGeneration, translationEN_ES }
     private bool[] hfModelsStatus = new bool[] { false, false, false };
+
+    //AudioSource
+    [SerializeField] private AudioSource audioSource;
 
     //--------------METHODS-----------------
 
@@ -42,6 +52,12 @@ public class SpeechToAnswerSystem : MonoBehaviour
             audioProcessing = false;
         else
             InitHuggingFaceModels(samples, numChannels);
+
+        if (Settings.Instance.useElevenLabs)
+        {
+            ElevenlabsAPI.OnRequestCompleted += PlayAudioSource;
+            ElevenlabsAPI.OnRequestFailed += StopAudioSource;
+        }
 
         foreach (GameObject popUp in uiPopUps)
         {
@@ -79,6 +95,24 @@ public class SpeechToAnswerSystem : MonoBehaviour
             HFTextGeneration(inputText);
     }
 
+    //Generate voice with text
+    public void StartNPCVoice(string inputText)
+    {
+        if (Settings.Instance.useElevenLabs)
+            elevenlabsAPI.GetAudio(inputText);
+        else
+            StartWindowsSynthVoice(inputText);
+    }
+
+    public void StopNPCVoice()
+    {
+        ActivatePopUp(-1);
+        if (Settings.Instance.useElevenLabs)
+            StopAudioSource();
+        else
+            MuteWindowsSynthVoice();
+    }
+
     //-------ChatGPT-------
 
     private async void WhisperGPT(float[] inputAudio, int frequency, int channels)
@@ -94,7 +128,10 @@ public class SpeechToAnswerSystem : MonoBehaviour
         };
         var res = await openai.CreateAudioTranscription(req);
 
-        SendChatGPTReply(res.Text);
+        if (res.Text.Equals("Subtítulos realizados por la comunidad de Amara.org"))
+            StartNPCVoice("Perdona, no te he entendido, ¿puedes repetirmelo?");
+        else
+            SendChatGPTReply(res.Text);
     }
 
     private async void SendChatGPTReply(string inputText)
@@ -124,8 +161,7 @@ public class SpeechToAnswerSystem : MonoBehaviour
             message.Content = message.Content.Trim();
 
             messages.Add(message);
-            TalkVoice(message.Content);
-            audioProcessing = false; //Break the process
+            StartNPCVoice(message.Content);
         }
         else
         {
@@ -218,8 +254,7 @@ public class SpeechToAnswerSystem : MonoBehaviour
         if (string.IsNullOrEmpty(inputText))
         {
             //We break the wait
-            Debug.Log("Perdona, no te he entendido.");
-            audioProcessing = false;
+            StartNPCVoice("Perdona, no te he entendido.");
         }
 
         //En caso de que si que se entienda la frase
@@ -244,23 +279,38 @@ public class SpeechToAnswerSystem : MonoBehaviour
         HuggingFaceAPI.Translation(inputText, response =>
         {
             ActivatePopUp((int)popUpsIdx.speaking);
-            TalkVoice(response);   //The bot talks
-            audioProcessing = false; //Break the process
+            StartNPCVoice(response);   //The bot talks
         }, error =>
         {
             audioProcessing = false; //Break the process
         });
     }
 
-    //Windows synth
-    private void TalkVoice(string inputText)
+    //AudioSource
+    private void PlayAudioSource(AudioClip audioClip)
     {
+        audioProcessing = false; //Break the process
+        ActivatePopUp((int)popUpsIdx.speaking);
+        audioSource.clip = audioClip;
+        audioSource.Play();
+    }
+
+    private void StopAudioSource()
+    {
+        audioProcessing = false; //Break the process
+        audioSource.Stop();
+    }
+
+    //Windows synth
+    private void StartWindowsSynthVoice(string inputText)
+    {
+        audioProcessing = false; //Break the process
         ActivatePopUp((int)popUpsIdx.speaking);
         voice.Speak(inputText, SpeechVoiceSpeakFlags.SVSFlagsAsync | SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak);
     }
-    public void MuteVoice()
+    private void MuteWindowsSynthVoice()
     {
-        ActivatePopUp(-1);
+        audioProcessing = false; //Break the process
         voice.Skip("Sentence", int.MaxValue);
     }
 

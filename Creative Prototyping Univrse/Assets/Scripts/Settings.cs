@@ -24,4 +24,5 @@ public sealed class Settings
     }
 
     public bool useChatGpt = true;
+    public bool useElevenLabs = false;
 }

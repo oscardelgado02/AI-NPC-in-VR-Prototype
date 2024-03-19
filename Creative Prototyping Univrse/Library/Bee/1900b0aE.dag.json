@@ -567,7 +567,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 107,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.UnityAdditionalFile.txt"
@@ -593,7 +593,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 41711,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.rsp2"
@@ -2764,7 +2764,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 49691,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.UnityAdditionalFile.txt"
@@ -2790,7 +2790,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 85957,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.rsp2"
@@ -3458,7 +3458,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 94475,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.UnityAdditionalFile.txt"
@@ -3484,7 +3484,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 142116,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.rsp2"
@@ -4161,7 +4161,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 150262,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.UnityAdditionalFile.txt"
@@ -4187,7 +4187,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 183521,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.rsp2"
@@ -4772,7 +4772,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 192357,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/HuggingFaceAPI.UnityAdditionalFile.txt"
@@ -4798,7 +4798,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 224420,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/HuggingFaceAPI.rsp2"
@@ -5347,7 +5347,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 233081,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/OpenAI.Editor.UnityAdditionalFile.txt"
@@ -5373,7 +5373,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 263438,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/OpenAI.Editor.rsp2"
@@ -5890,7 +5890,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 272349,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/OpenAI.Runtime.UnityAdditionalFile.txt"
@@ -5916,7 +5916,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 301960,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/OpenAI.Runtime.rsp2"
@@ -6423,7 +6423,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 310637,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.UnityAdditionalFile.txt"
@@ -6449,7 +6449,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 341345,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.rsp2"
@@ -6969,7 +6969,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 350275,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.UnityAdditionalFile.txt"
@@ -6995,7 +6995,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 417013,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.rsp2"
@@ -7867,7 +7867,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 425681,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.UnityAdditionalFile.txt"
@@ -7893,7 +7893,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 462457,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.rsp2"
@@ -8483,7 +8483,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 471149,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.UnityAdditionalFile.txt"
@@ -8509,7 +8509,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 504654,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.rsp2"
@@ -9058,7 +9058,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 513602,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.UnityAdditionalFile.txt"
@@ -9084,7 +9084,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 575591,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.rsp2"
@@ -9887,7 +9887,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 584065,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.UnityAdditionalFile.txt"
@@ -9913,7 +9913,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 617007,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.rsp2"
@@ -10447,7 +10447,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 625392,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Settings.Editor.UnityAdditionalFile.txt"
@@ -10473,7 +10473,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 656800,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Settings.Editor.rsp2"
@@ -11002,7 +11002,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 665756,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.UnityAdditionalFile.txt"
@@ -11028,7 +11028,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 697985,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp2"
@@ -11559,7 +11559,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 706981,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.UnityAdditionalFile.txt"
@@ -11585,7 +11585,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 738003,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp2"
@@ -12105,7 +12105,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 746965,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.UnityAdditionalFile.txt"
@@ -12131,7 +12131,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 781296,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.rsp2"
@@ -12691,7 +12691,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 789961,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.UnityAdditionalFile.txt"
@@ -12717,7 +12717,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 825370,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.rsp2"
@@ -13291,7 +13291,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 834037,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.UnityAdditionalFile.txt"
@@ -13317,7 +13317,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 865090,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.rsp2"
@@ -13841,7 +13841,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 874018,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.UnityAdditionalFile.txt"
@@ -13867,7 +13867,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 907353,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.rsp2"
@@ -14407,7 +14407,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 915743,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Management.UnityAdditionalFile.txt"
@@ -14433,7 +14433,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 945447,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Management.rsp2"
@@ -14941,7 +14941,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 954127,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.SpatialTracking.UnityAdditionalFile.txt"
@@ -14967,7 +14967,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 983596,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.SpatialTracking.rsp2"
@@ -15471,7 +15471,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 992278,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/HuggingFaceAPI.Editor.UnityAdditionalFile.txt"
@@ -15497,7 +15497,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1022819,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/HuggingFaceAPI.Editor.rsp2"
@@ -16017,7 +16017,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1031748,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.UnityAdditionalFile.txt"
@@ -16043,7 +16043,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1062241,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.rsp2"
@@ -16582,7 +16582,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1071257,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.UnityAdditionalFile.txt"
@@ -16608,7 +16608,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1100654,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.rsp2"
@@ -17133,7 +17133,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1109421,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.TestFramework.UnityAdditionalFile.txt"
@@ -17159,7 +17159,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1137711,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.TestFramework.rsp2"
@@ -17645,7 +17645,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1145847,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.Editor.UnityAdditionalFile.txt"
@@ -17671,7 +17671,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1176645,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.Editor.rsp2"
@@ -18213,7 +18213,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1185667,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.UnityAdditionalFile.txt"
@@ -18239,7 +18239,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1220294,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.rsp2"
@@ -18848,7 +18848,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1229018,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.UnityAdditionalFile.txt"
@@ -18874,7 +18874,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1263875,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.rsp2"
@@ -19460,7 +19460,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1272883,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.UnityAdditionalFile.txt"
@@ -19486,7 +19486,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1327574,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.rsp2"
@@ -20296,7 +20296,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1336581,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Core.UnityAdditionalFile.txt"
@@ -20322,7 +20322,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1419892,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Core.rsp2"
@@ -21255,7 +21255,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1428649,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.CoreUtils.UnityAdditionalFile.txt"
@@ -21281,7 +21281,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1465181,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.CoreUtils.rsp2"
@@ -21886,7 +21886,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1474027,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Management.Editor.UnityAdditionalFile.txt"
@@ -21912,7 +21912,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1507438,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Management.Editor.rsp2"
@@ -22483,7 +22483,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1516444,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Oculus.UnityAdditionalFile.txt"
@@ -22509,7 +22509,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1546850,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Oculus.rsp2"
@@ -23033,7 +23033,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1555686,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.SpatialTracking.UnityAdditionalFile.txt"
@@ -23059,7 +23059,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1586356,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.SpatialTracking.rsp2"
@@ -23581,7 +23581,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1595389,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.UnityAdditionalFile.txt"
@@ -23607,7 +23607,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1625022,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.rsp2"
@@ -24116,7 +24116,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1633811,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Core.Editor.UnityAdditionalFile.txt"
@@ -24142,7 +24142,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1721191,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Core.Editor.rsp2"
@@ -25150,7 +25150,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1730222,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Flow.UnityAdditionalFile.txt"
@@ -25176,7 +25176,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1808943,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Flow.rsp2"
@@ -26087,7 +26087,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1817795,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.CoreUtils.Editor.UnityAdditionalFile.txt"
@@ -26113,7 +26113,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1852038,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.CoreUtils.Editor.rsp2"
@@ -26692,7 +26692,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1861134,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.UnityAdditionalFile.txt"
@@ -26718,7 +26718,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1924134,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.rsp2"
@@ -27542,7 +27542,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1933332,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.XR.LegacyInputHelpers.UnityAdditionalFile.txt"
@@ -27568,7 +27568,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1964567,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.XR.LegacyInputHelpers.rsp2"
@@ -28102,7 +28102,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 1973780,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Flow.Editor.UnityAdditionalFile.txt"
@@ -28128,7 +28128,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2024875,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Flow.Editor.rsp2"
@@ -28865,7 +28865,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2034169,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.State.UnityAdditionalFile.txt"
@@ -28891,7 +28891,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2066740,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.State.rsp2"
@@ -29431,7 +29431,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2075612,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.Editor.UnityAdditionalFile.txt"
@@ -29457,7 +29457,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2115535,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.Editor.rsp2"
@@ -30106,7 +30106,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2124929,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.UnityAdditionalFile.txt"
@@ -30655,7 +30655,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2164065,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Oculus.Editor.UnityAdditionalFile.txt"
@@ -30681,7 +30681,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2195032,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Oculus.Editor.rsp2"
@@ -31253,7 +31253,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2204316,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.UnityAdditionalFile.txt"
@@ -31279,7 +31279,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2236327,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.rsp2"
@@ -31861,7 +31861,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2245745,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.State.Editor.UnityAdditionalFile.txt"
@@ -31887,7 +31887,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2284561,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.State.Editor.rsp2"
@@ -32491,7 +32491,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2293991,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.UnityAdditionalFile.txt"
@@ -33067,7 +33067,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2334137,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Shared.Editor.UnityAdditionalFile.txt"
@@ -33093,7 +33093,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2365101,
       "PayloadLength": 89,
-      "PayloadDebugContentSnippet": "/pathmap:\"E:\\GitRepositories\\C",
+      "PayloadDebugContentSnippet": "/pathmap:\"D:\\GitRepositories\\C",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Shared.Editor.rsp2"
@@ -33652,7 +33652,7 @@
       "ActionType": "WriteFile",
       "PayloadOffset": 2374586,
       "PayloadLength": 76,
-      "PayloadDebugContentSnippet": "E:\\GitRepositories\\Creative-Pr",
+      "PayloadDebugContentSnippet": "D:\\GitRepositories\\Creative-Pr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.UnityAdditionalFile.txt"
@@ -33664,7 +33664,7 @@
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 2374748,
-      "PayloadLength": 34075,
+      "PayloadLength": 34146,
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
       "Outputs": [
@@ -33676,7 +33676,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 2408910,
+      "PayloadOffset": 2408981,
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -33956,6 +33956,8 @@
         "Assets/Scripts/AudioClipSaver.cs",
         "Assets/Scripts/DropdownEditor/PropertyDrawersHelper.cs",
         "Assets/Scripts/DropdownEditor/StringInListDrawer.cs",
+        "Assets/Scripts/ElevenLabsAPI.cs",
+        "Assets/Scripts/GameController.cs",
         "Assets/Scripts/PlayerSpeechRecord.cs",
         "Assets/Scripts/PopUp.cs",
         "Assets/Scripts/Settings.cs",
@@ -34382,7 +34384,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 2409006,
+      "PayloadOffset": 2409077,
       "PayloadLength": 11218,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
@@ -36198,7 +36200,7 @@
     {
       "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json",
       "DisplayName": "BuildPlayerDataGenerator TypeDb-All",
-      "Action": "\"E:/UnityEditor/2022.3.20f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"E:/UnityEditor/2022.3.20f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Assets\\Plugins\\Interop.SpeechLib.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\HuggingFaceAPI.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\OpenAI.Runtime.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.InputSystem.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.InputSystem.ForUI.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.InputSystem.TestFramework.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.Mathematics.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.TextMeshPro.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.Timeline.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.VisualScripting.Core.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.VisualScripting.Flow.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.VisualScripting.State.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.CoreUtils.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.Interaction.Toolkit.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.Interaction.Toolkit.Samples.StarterAssets.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.Management.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.Oculus.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\UnityEngine.SpatialTracking.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\UnityEngine.UI.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\UnityEngine.XR.LegacyInputHelpers.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\\nunit.framework.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1\\Runtime\\Newtonsoft.Json.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.testtools.codecoverage@1.2.5\\lib\\ReportGenerator\\ReportGeneratorMerged.dll\" -a=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.visualscripting@1.9.1\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\\Unity.VisualScripting.Antlr3.Runtime.dll\" -s=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Assets\\Plugins\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\" -s=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\" -s=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1\\Runtime\" -s=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.testtools.codecoverage@1.2.5\\lib\\ReportGenerator\" -s=\"E:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.visualscripting@1.9.1\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
+      "Action": "\"E:/UnityEditor/2022.3.20f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"E:/UnityEditor/2022.3.20f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Assets\\Plugins\\Interop.SpeechLib.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\HuggingFaceAPI.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\OpenAI.Runtime.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.InputSystem.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.InputSystem.ForUI.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.InputSystem.TestFramework.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.Mathematics.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.TextMeshPro.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.Timeline.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.VisualScripting.Core.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.VisualScripting.Flow.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.VisualScripting.State.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.CoreUtils.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.Interaction.Toolkit.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.Interaction.Toolkit.Samples.StarterAssets.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.Management.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\Unity.XR.Oculus.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\UnityEngine.SpatialTracking.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\UnityEngine.UI.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\\UnityEngine.XR.LegacyInputHelpers.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\\nunit.framework.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1\\Runtime\\Newtonsoft.Json.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.testtools.codecoverage@1.2.5\\lib\\ReportGenerator\\ReportGeneratorMerged.dll\" -a=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.visualscripting@1.9.1\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\\Unity.VisualScripting.Antlr3.Runtime.dll\" -s=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Assets\\Plugins\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"E:\\UnityEditor\\2022.3.20f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\ScriptAssemblies\" -s=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\" -s=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1\\Runtime\" -s=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.testtools.codecoverage@1.2.5\\lib\\ReportGenerator\" -s=\"D:\\GitRepositories\\Creative-Prototyping-Univrse\\Creative Prototyping Univrse\\Library\\PackageCache\\com.unity.visualscripting@1.9.1\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
       "Inputs": [
         "E:/UnityEditor/2022.3.20f1/Editor/Data/Tools/netcorerun/netcorerun.exe",
         "E:/UnityEditor/2022.3.20f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
@@ -36587,6 +36589,6 @@
   "SharedResources": [],
   "Scanners": [],
   "Identifier": "Library/Bee/1900b0aE.dag.json",
-  "PayloadsFile": "E:/GitRepositories/Creative-Prototyping-Univrse/Creative Prototyping Univrse/Library/Bee/1900b0aE.dag.payloads",
+  "PayloadsFile": "D:/GitRepositories/Creative-Prototyping-Univrse/Creative Prototyping Univrse/Library/Bee/1900b0aE.dag.payloads",
   "RelativePathToRoot": "../.."
 }
