@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.XR.CoreUtils.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerSpeechRecord : MonoBehaviour
 {
@@ -161,18 +162,13 @@ public class PlayerSpeechRecord : MonoBehaviour
 
     private bool GetIfLookingAtNPC()
     {
-        RaycastHit[] hits;
-
         // Calculate direction of the raycast based on camera's forward vector
         Vector3 raycastDirection = Camera.main.transform.forward;
 
-        // Perform a spherecast to simulate a limited FOV
-        hits = Physics.SphereCastAll(Camera.main.transform.position, 0.1f, raycastDirection, distanceInteractionNPC);
-
-        // Check all hits to see if any intersect with the object
-        foreach (RaycastHit hit in hits)
+        foreach(RaycastHit hit in Physics.RaycastAll(Camera.main.transform.position, raycastDirection))
         {
-            if (hit.collider != null && hit.collider.gameObject == npc) // Replace gameObject with the object you want to check
+            // Check if the object hit by the raycast is the object we want to detect
+            if (hit.collider.gameObject == npc)
             {
                 return true;
             }
