@@ -14,7 +14,7 @@ public class SpeechToAnswerSystem : MonoBehaviour
 
     //NPC Control
     public bool audioProcessing = true;
-    private bool initialConversation = false;
+    public bool initialConversation = false;
 
     //Pop Ups
     private enum popUpsIdx { listening, processing, speaking }
@@ -59,11 +59,10 @@ public class SpeechToAnswerSystem : MonoBehaviour
             ElevenlabsAPI.OnRequestFailed += StopAudioSource;
         }
 
-        foreach (GameObject popUp in uiPopUps)
-        {
-            popUp.SetActive(false);
-        }
+        ActivatePopUp(-1);  //Hide all PopUps
     }
+
+    private void Update() { CheckIfNPCIsSpeaking(); }
 
     public void GenerateInitialConversation()
     {
@@ -106,7 +105,7 @@ public class SpeechToAnswerSystem : MonoBehaviour
 
     public void StopNPCVoice()
     {
-        ActivatePopUp(-1);
+        ActivatePopUp(-1);  //Hide all PopUps
         if (Settings.Instance.useElevenLabs)
             StopAudioSource();
         else
@@ -320,6 +319,17 @@ public class SpeechToAnswerSystem : MonoBehaviour
         for (int i = 0; i < uiPopUps.Count; i++)
         {
             uiPopUps[i].SetActive(i == idx);
+        }
+    }
+
+    private void CheckIfNPCIsSpeaking()
+    {
+        if (!audioProcessing)
+        {
+            if (Settings.Instance.useElevenLabs && !audioSource.isPlaying)
+                ActivatePopUp(-1);  //Hide the PopUps
+            else if (!Settings.Instance.useElevenLabs && voice.Status.RunningState == SpeechRunState.SRSEDone)
+                ActivatePopUp(-1);  //Hide the PopUps
         }
     }
 

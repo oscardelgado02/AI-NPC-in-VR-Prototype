@@ -53,8 +53,15 @@ public class PlayerSpeechRecord : MonoBehaviour
             RecordLoudness();
         }
 
+        //In case we are near the NPC
         if (getIfNearNPC)
             npcConversationalSystem.GenerateInitialConversation();
+        //In case we are out of the range of the NPC
+        else
+        {
+            npcConversationalSystem.initialConversation = false;    //Next time we are near him, the NPC will greet again
+            npcConversationalSystem.StopNPCVoice(); //We mute the NPC
+        }
 
         if (!npcConversationalSystem.audioProcessing && !speechClipRecording && GetIfLoudnessGreaterThanThreshold() && getIfLookingNPC && getIfNearNPC)
         {
