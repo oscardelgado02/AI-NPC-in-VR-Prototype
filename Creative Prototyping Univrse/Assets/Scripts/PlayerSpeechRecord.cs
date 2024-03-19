@@ -146,7 +146,8 @@ public class PlayerSpeechRecord : MonoBehaviour
         //audioSource.clip = subClip;
         //audioSource.Play();
 
-        npcConversationalSystem.ListenPlayer(samples, AudioSettings.outputSampleRate, microphoneClip.channels);
+        //We send the audio to the NPC
+        npcConversationalSystem.GenerateNPCAnswer(samples, AudioSettings.outputSampleRate, microphoneClip.channels);
     }
 
     //-------------Detect if we are interacting with the NPC---------------

@@ -1,0 +1,44 @@
+{
+  "name": "com.srcnalt.openai-unity",
+  "version": "0.2.0",
+  "displayName": "OpenAI Unity",
+  "description": "An unofficial OpenAI Unity package that aims to help you use OpenAI API directly in Unity game engine.",
+  "unity": "2020.3",
+  "unityRelease": "0f1",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  },
+  "keywords": [
+    "openai",
+    "chatgpt",
+    "dalle",
+    "ai",
+    "whisper"
+  ],
+  "author": {
+    "name": "Sercan (Sarge) Altundas",
+    "url": "https://github.com/srcnalt"
+  },
+  "samples": [
+    {
+      "displayName": "ChatGPT",
+      "description": "ChatGPT example using chat completion API.",
+      "path": "Samples~/ChatGPT"
+    },
+    {
+      "displayName": "Stream Response",
+      "description": "An example that shows how to stream text and chat completion responses.",
+      "path": "Samples~/Stream Response"
+    },
+    {
+      "displayName": "DallE",
+      "description": "A DALL.E text to image generation example.",
+      "path": "Samples~/DallE"
+    },
+    {
+      "displayName": "Whisper",
+      "description": "A Whisper audio to text generation example.",
+      "path": "Samples~/Whisper"
+    }
+  ]
+}

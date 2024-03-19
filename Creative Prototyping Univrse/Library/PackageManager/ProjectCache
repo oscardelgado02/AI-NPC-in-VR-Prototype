@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638463856983610730
-    m_Hash: 759564162
+      ticks: 638464399767670217
+    m_Hash: 2977653102
   m_LockFileStatus:
     m_FilePath: E:/GitRepositories/Creative-Prototyping-Univrse/Creative Prototyping
       Univrse/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638463856997290669
-    m_Hash: 594878140
+      ticks: 638464399767700089
+    m_Hash: 968467729
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -69,6 +69,69 @@ m_ResolvedPackages:
   - huggingface
   - api
   - chatbot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.srcnalt.openai-unity@https://github.com/srcnalt/OpenAI-Unity.git
+  testable: 0
+  isDirectDependency: 1
+  version: 0.2.0
+  source: 5
+  resolvedPath: E:\GitRepositories\Creative-Prototyping-Univrse\Creative Prototyping
+    Univrse\Library\PackageCache\com.srcnalt.openai-unity@f7f501c076
+  assetPath: Packages/com.srcnalt.openai-unity
+  name: com.srcnalt.openai-unity
+  displayName: OpenAI Unity
+  author:
+    name: Sercan (Sarge) Altundas
+    email: 
+    url: https://github.com/srcnalt
+  category: 
+  type: 
+  description: An unofficial OpenAI Unity package that aims to help you use OpenAI
+    API directly in Unity game engine.
+  status: 0
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies:
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  resolvedDependencies:
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  keywords:
+  - openai
+  - chatgpt
+  - dalle
+  - ai
+  - whisper
   registry:
     id: main
     name: 
