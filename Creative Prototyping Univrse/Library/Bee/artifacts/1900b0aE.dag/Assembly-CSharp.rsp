@@ -391,6 +391,7 @@
 "Assets/Scripts/BoardInteraction.cs"
 "Assets/Scripts/DropdownEditor/PropertyDrawersHelper.cs"
 "Assets/Scripts/DropdownEditor/StringInListDrawer.cs"
+"Assets/Scripts/DropdownReference.cs"
 "Assets/Scripts/ElevenLabsAPI.cs"
 "Assets/Scripts/PlayerSpeechRecord.cs"
 "Assets/Scripts/PopUp.cs"

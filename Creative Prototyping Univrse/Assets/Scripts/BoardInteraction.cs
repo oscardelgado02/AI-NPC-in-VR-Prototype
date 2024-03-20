@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
@@ -32,6 +33,7 @@ public class BoardInteraction : MonoBehaviour
 
         //We init the dropdown
         PopulateDropdown();
+        microDropdown.value = SearchDropdownIndexByName(PlayerSpeechRecord.microphoneOption);
         microDropdown.onValueChanged.AddListener(HandleDropdownValueChanged);
     }
 
@@ -57,8 +59,19 @@ public class BoardInteraction : MonoBehaviour
     private void HandleDropdownValueChanged(int index)
     {
         string selectedOption = microDropdown.options[index].text;
-        Debug.Log("Selected option: " + selectedOption);
         PlayerSpeechRecord.microphoneOption = selectedOption;
+        microDropdown.value = index;
+        microDropdown.Hide();
+    }
+    private int SearchDropdownIndexByName(string name)
+    {
+        for(int i = 0; i < Microphone.devices.Length; i++)
+        {
+            if (Microphone.devices[i].Equals(name))
+                return i;
+        }
+
+        return 0;   //Get the first microphone in case it does not find any
     }
 
     private void Update()
@@ -108,63 +121,58 @@ public class BoardInteraction : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(controllerTransform.position, controllerTransform.forward, out hit, interactionDistance))
         {
-            // Check if the object hit is a dropdown
-            TMP_Dropdown dropdown = hit.collider.GetComponent<TMP_Dropdown>();
-            if (dropdown != null)
+            Toggle optionDropdown = hit.collider.GetComponent<Toggle>();
+            if (optionDropdown != null)
             {
-                // Open the dropdown
-                dropdown.Show();
-
-                // Check if the hit point is inside the dropdown's rect transform
-                RectTransform dropdownRect = dropdown.gameObject.GetComponent<RectTransform>();
-                if (RectTransformUtility.RectangleContainsScreenPoint(dropdownRect, hit.point))
-                {
-                    // Calculate local position within the dropdown
-                    Vector2 localPosition;
-                    RectTransformUtility.ScreenPointToLocalPointInRectangle(dropdownRect, hit.point, null, out localPosition);
-
-                    // Calculate which option was hit
-                    int optionIndex = GetDropdownOptionIndex(dropdown, localPosition);
-
-                    // Set the dropdown's value to the selected option index
-                    dropdown.value = optionIndex;
-
-                    // Trigger the dropdown's OnValueChanged event
-                    dropdown.onValueChanged.Invoke(optionIndex);
-                }
+                HandleDropdownValueChanged(SearchDropdownIndexByName(optionDropdown.transform.Find("Item Label").GetComponent<TMP_Text>().text));
             }
             else
             {
-                // Check if the object hit is a button
-                Button button = hit.collider.GetComponent<Button>();
-                if (button != null)
+                // Check if the object hit is a dropdown
+                TMP_Dropdown dropdown = hit.collider.GetComponent<TMP_Dropdown>();
+                if (dropdown != null)
                 {
-                    button.onClick.Invoke();
+                    // Open the dropdown
+                    dropdown.Show();
+
+                    //Adjust the dropdown visually
+                    RectTransform drowpownTransform = dropdown.transform.Find("Dropdown List").GetComponent<RectTransform>();
+                    drowpownTransform.anchorMin = new Vector2(0,0);
+                    drowpownTransform.anchorMax = new Vector2(1, 0);
+                    drowpownTransform.pivot = new Vector2(0.5f, 1);
+                    drowpownTransform.anchoredPosition = new Vector2(0f, 2);
+
+                    GameObject parent = dropdown.transform.Find("Dropdown List").transform.GetChild(0).transform.GetChild(0).gameObject;
+                    // Add BoxCollider to each dropdown option
+                    for(int i = 0; i<Microphone.devices.Length; i++)
+                    {
+                        string idx = $"Item {i}: {Microphone.devices[i]}";
+                        GameObject itemGameObject = parent.transform.Find(idx).gameObject;
+                        if (itemGameObject.GetComponent<BoxCollider>() == null)
+                        {
+                            BoxCollider boxCollider = itemGameObject.AddComponent<BoxCollider>();
+                            // Adjust collider size and position as per your requirement
+                            boxCollider.size = new Vector3(135f, 20f, 1f); // Adjust size as needed
+                            boxCollider.center = new Vector3(0f, 0f, -0.03f); // Adjust center as needed
+                        }
+                        if (itemGameObject.GetComponent<DropdownReference>() == null)
+                        {
+                            DropdownReference dropdownReference = itemGameObject.AddComponent<DropdownReference>();
+                            dropdownReference.parent = dropdown;
+                        }
+                    }
+                }
+                else
+                {
+                    // Comprobar si el objeto golpeado es un botón
+                    Button button = hit.collider.GetComponent<Button>();
+                    if (button != null)
+                    {
+                        // Llamar al método para interactuar con el botón
+                        button.onClick.Invoke();
+                    }
                 }
             }
         }
     }
-
-    private int GetDropdownOptionIndex(TMP_Dropdown dropdown, Vector2 localPosition)
-    {
-        RectTransform dropdownRect = dropdown.GetComponent<RectTransform>();
-        if (dropdownRect != null)
-        {
-            // Calculate the local position of the hit point within the dropdown's rect transform
-            Vector2 normalizedPosition = new Vector2(
-                Mathf.InverseLerp(dropdownRect.rect.xMin, dropdownRect.rect.xMax, localPosition.x),
-                Mathf.InverseLerp(dropdownRect.rect.yMin, dropdownRect.rect.yMax, localPosition.y));
-
-            // Calculate the option index based on the normalized position
-            int optionIndex = Mathf.FloorToInt(normalizedPosition.y * dropdown.options.Count);
-
-            // Clamp the option index within the range of valid indices
-            optionIndex = Mathf.Clamp(optionIndex, 0, dropdown.options.Count - 1);
-
-            return optionIndex;
-        }
-
-        return -1; // No option was hit or dropdown rect transform is null
-    }
-
 }
