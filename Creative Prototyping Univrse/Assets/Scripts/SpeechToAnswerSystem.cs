@@ -1,4 +1,3 @@
-using HuggingFace.API;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -13,7 +12,7 @@ public class SpeechToAnswerSystem : MonoBehaviour
     //--------------ATTRIBUTES-----------------
 
     //NPC Control
-    public bool audioProcessing = true;
+    public bool audioProcessing = false;
     public bool initialConversation = false;
 
     //Pop Ups
@@ -36,23 +35,13 @@ public class SpeechToAnswerSystem : MonoBehaviour
     //ElevenLabs API
     [SerializeField] private ElevenlabsAPI elevenlabsAPI;
 
-    //Hugging Face Models
-    //private Conversation conversation;
-    private enum hfModelsIdx { speechRecognition, textGeneration, translationEN_ES }
-    private bool[] hfModelsStatus = new bool[] { false, false, false };
-
     //AudioSource
     [SerializeField] private AudioSource audioSource;
 
     //--------------METHODS-----------------
 
-    public void InitNPC(float[] samples, int numChannels)
+    private void Start()
     {
-        if(Settings.Instance.useChatGpt)
-            audioProcessing = false;
-        else
-            InitHuggingFaceModels(samples, numChannels);
-
         //ElevenLabs
         ElevenlabsAPI.OnRequestCompleted += PlayAudioSource;
         ElevenlabsAPI.OnRequestFailed += StopAudioSource;
@@ -76,20 +65,14 @@ public class SpeechToAnswerSystem : MonoBehaviour
     public void GenerateNPCAnswer(float[] inputAudio, int frequency, int channels)
     {
         audioProcessing = true;
-        if (Settings.Instance.useChatGpt)
-            WhisperGPT(inputAudio, frequency, channels);
-        else
-            HFSpeechToText(inputAudio, frequency, channels);
+        WhisperGPT(inputAudio, frequency, channels);
     }
 
     //GenerateNPCAnswer only with text
     private void GenerateNPCAnswer(string inputText)
     {
         audioProcessing = true;
-        if (Settings.Instance.useChatGpt)
-            SendChatGPTReply(inputText);
-        else
-            HFTextGeneration(inputText);
+        SendChatGPTReply(inputText);
     }
 
     //Generate voice with text
@@ -125,7 +108,7 @@ public class SpeechToAnswerSystem : MonoBehaviour
         };
         var res = await openai.CreateAudioTranscription(req);
 
-        if (res.Text.Equals("Subtítulos realizados por la comunidad de Amara.org"))
+        if (res.Text.ToLower().Contains("amara.org"))
             StartNPCVoice("Perdona, no te he entendido, ¿puedes repetirmelo?");
         else
             SendChatGPTReply(res.Text);
@@ -165,122 +148,6 @@ public class SpeechToAnswerSystem : MonoBehaviour
             Debug.LogWarning("No text was generated from this prompt.");
             audioProcessing = false; //Break the process
         }
-    }
-
-    //-------Hugging Face-------
-
-    //This method just does some querys to the hugging face interface to load them before talking to
-    //the NPC and store them in cache, this way we increase the speed in future query's
-    private void InitHuggingFaceModels(float[] samples, int numChannels)
-    {
-        //Speech Recognition
-        InitSpeechRecognition(samples, numChannels);
-
-        //Text Generation
-        InitTextGeneration();
-
-        //Translator from enlish to spanish
-        InitTranslation_EN_ES();
-    }
-
-    private void InitSpeechRecognition(float[] samples, int numChannels)
-    {
-        HuggingFaceAPI.AutomaticSpeechRecognition(EncodeAsWAV(samples, AudioSettings.outputSampleRate, numChannels), response => {
-            Debug.Log("SpeechRecognition initialized");
-            hfModelsStatus[(int)hfModelsIdx.speechRecognition] = true;
-            StartHFPlayerInteraction();
-        }, error => {
-            Debug.Log("SpeechRecognition NOT initialized");
-            InitSpeechRecognition(samples, numChannels);
-        });
-    }
-
-    private void InitTextGeneration()
-    {
-        HuggingFaceAPI.TextGeneration("Hola", response =>
-        {
-            Debug.Log($"TextGeneration initialized");
-            hfModelsStatus[(int)hfModelsIdx.textGeneration] = true;
-            StartHFPlayerInteraction();
-        }, error =>
-        {
-            Debug.Log("TextGeneration NOT initialized");
-            InitTextGeneration();
-        });
-    }
-
-    private void InitTranslation_EN_ES()
-    {
-        HuggingFaceAPI.Translation("Hola", response =>
-        {
-            Debug.Log($"Translation_EN_ES initialized");
-            hfModelsStatus[(int)hfModelsIdx.translationEN_ES] = true;
-            StartHFPlayerInteraction();
-        }, error =>
-        {
-            Debug.Log("Translation_EN_ES NOT initialized");
-            InitTranslation_EN_ES();
-        });
-    }
-
-    private void StartHFPlayerInteraction()
-    {
-        bool status = false;
-        foreach (bool modelStatus in hfModelsStatus)
-        {
-            status |= !modelStatus;
-        }
-        audioProcessing = status;
-    }
-
-    private void HFSpeechToText(float[] inputAudio, int frequency, int channels)
-    {
-        ActivatePopUp((int)popUpsIdx.listening);
-        string speechToTextResult = string.Empty;
-        HuggingFaceAPI.AutomaticSpeechRecognition(EncodeAsWAV(inputAudio, frequency, channels), response => {
-            speechToTextResult = response;
-            Debug.Log($"User: {speechToTextResult}");
-            HFTextGeneration(speechToTextResult);
-        }, error => {
-            audioProcessing = false; //Break the process
-        });
-    }
-
-    private void HFTextGeneration(string inputText)
-    {
-        if (string.IsNullOrEmpty(inputText))
-        {
-            //We break the wait
-            StartNPCVoice("Perdona, no te he entendido.");
-        }
-
-        //En caso de que si que se entienda la frase
-        else
-        {
-            ActivatePopUp((int)popUpsIdx.processing);
-            string conversationOutput = string.Empty;
-            HuggingFaceAPI.TextGeneration(inputText, response =>
-            {
-                conversationOutput = response;
-                Debug.Log($"NPC: {conversationOutput}");
-                HFTranslation(conversationOutput);   //Sound of the npc
-            }, error =>
-            {
-                audioProcessing = false; //Break the process
-            });
-        }
-    }
-
-    private void HFTranslation(string inputText)
-    {
-        HuggingFaceAPI.Translation(inputText, response =>
-        {
-            ActivatePopUp((int)popUpsIdx.speaking);
-            StartNPCVoice(response);   //The bot talks
-        }, error =>
-        {
-            audioProcessing = false; //Break the process
-        });
     }
 
     //AudioSource

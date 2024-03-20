@@ -34,7 +34,6 @@ public class BoardInteraction : MonoBehaviour
         //We init the dropdown
         PopulateDropdown();
         microDropdown.value = SearchDropdownIndexByName(PlayerSpeechRecord.microphoneOption);
-        microDropdown.onValueChanged.AddListener(HandleDropdownValueChanged);
     }
 
     public void ElevenLabsOrWindowsSynth(bool status) { Settings.Instance.useElevenLabs = status; }
@@ -59,7 +58,7 @@ public class BoardInteraction : MonoBehaviour
     private void HandleDropdownValueChanged(int index)
     {
         string selectedOption = microDropdown.options[index].text;
-        PlayerSpeechRecord.microphoneOption = selectedOption;
+        PlayerSpeechRecord.UpdateMicrophone(selectedOption);
         microDropdown.value = index;
         microDropdown.Hide();
     }

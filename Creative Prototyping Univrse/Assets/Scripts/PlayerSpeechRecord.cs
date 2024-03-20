@@ -41,9 +41,6 @@ public class PlayerSpeechRecord : MonoBehaviour
         timerBeingSilent = Timers.Instance.CreateTimer(true);
 
         RecordLoudness();
-
-        //We init the models
-        npcConversationalSystem.InitNPC(GetSampleDataFromMicrophone(), microphoneClip.channels);
     }
 
     private void Update()
@@ -100,7 +97,7 @@ public class PlayerSpeechRecord : MonoBehaviour
     private void RecordLoudness()
     {
         Microphone.End(microphoneOption);
-        microphoneClip = Microphone.Start(microphoneOption, false, 20, AudioSettings.outputSampleRate);
+        microphoneClip = Microphone.Start(microphoneOption, false, 60, AudioSettings.outputSampleRate);
     }
 
     private bool GetIfLoudnessGreaterThanThreshold()
@@ -187,5 +184,13 @@ public class PlayerSpeechRecord : MonoBehaviour
     {
         //Mute the npc
         npcConversationalSystem.StopNPCVoice();
+    }
+
+    //Update Microphone
+    public static void UpdateMicrophone(string name)
+    {
+        Microphone.End(microphoneOption);
+        microphoneOption = name;
+        microphoneClip = Microphone.Start(microphoneOption, false, 20, AudioSettings.outputSampleRate);
     }
 }
