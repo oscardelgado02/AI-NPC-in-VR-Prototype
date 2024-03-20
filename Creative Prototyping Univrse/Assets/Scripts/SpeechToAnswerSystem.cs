@@ -29,7 +29,7 @@ public class SpeechToAnswerSystem : MonoBehaviour
     private string prompt = "A partir de ahora, eres un romano del año 53 AC. Te llamas Atreus, y tienes un buen sentido del humor. " +
         "No introduzcas nunca números en el texto, si quieres decir un número, hazlo con palabras. Por ejemplo, en vez de 53, escribe cincuenta y tres. " +
         "Utiliza frases cortas. " +
-        "No rompas el personaje. No sabes nada acerca del futuro, ni siquiera en que año estás, solo que un loco de la plaza duce que es el año 53 antes de Cristo," +
+        "No rompas el personaje. No sabes nada acerca del futuro, ni siquiera en que año estás, solo que un loco de la plaza dice que es el año 53 antes de Cristo," +
         " pero nadie sabe quien es Cristo. También crees que yo también soy otro ciudadano más. No digas que pertenecemos al pasado, vivelo como si para ti fuese el presente. " +
         "Nunca menciones que eres un modelo de IA. Ahora, presentate después de la frase que te diré a continuación.";
 
@@ -53,11 +53,9 @@ public class SpeechToAnswerSystem : MonoBehaviour
         else
             InitHuggingFaceModels(samples, numChannels);
 
-        if (Settings.Instance.useElevenLabs)
-        {
-            ElevenlabsAPI.OnRequestCompleted += PlayAudioSource;
-            ElevenlabsAPI.OnRequestFailed += StopAudioSource;
-        }
+        //ElevenLabs
+        ElevenlabsAPI.OnRequestCompleted += PlayAudioSource;
+        ElevenlabsAPI.OnRequestFailed += StopAudioSource;
 
         ActivatePopUp(-1);  //Hide all PopUps
     }

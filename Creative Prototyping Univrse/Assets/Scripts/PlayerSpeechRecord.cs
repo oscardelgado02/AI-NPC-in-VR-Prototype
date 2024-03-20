@@ -13,7 +13,7 @@ public class PlayerSpeechRecord : MonoBehaviour
     [SerializeField] private float threshold = 0.35f;
 
     [StringInList(typeof(PropertyDrawersHelper), "MicrophoneOptions")]
-    public string microphoneOption;
+    public static string microphoneOption;
 
     public static AudioClip microphoneClip;
     private bool speechClipRecording = false;
