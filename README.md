@@ -1,5 +1,22 @@
 # Creative Prototyping Univrse
 
+### Enable your credentials
+To make work the NPC, you need your OpenAI credentials.
+
+Follow these steps:
+
+- Create a folder called .openai in your home directory (e.g. `C:User\UserName\` for Windows or `~\` for Linux or Mac)
+- Create a file called `auth.json` in the `.openai` folder
+- Add an api_key field and a organization field (optional) to the auth.json file and save it
+- Here is an example of what your auth.json file should look like:
+
+```json
+{
+    "api_key": "sk-...W6yi",
+    "organization": "org-...L7W"
+}
+```
+
 ### Controls
 - To move your position, you can push and hold the right Joystick forward, then release.
 - To talk to the NPC, just aproach to it and it will start the conversation. The microphone is all the time listening, so talk without having to press any button!
@@ -41,20 +58,3 @@ The first time the NPC interacts with the user, a prompt is sent to the Conversa
 - The NPC only will listen you if you talk looking at it. This way, in scenarios where users might be conversing with friends rather than the NPC, this feature can prevent confusion or frustration in a public exhibition setting.
 - The NPC talks in spanish.
 - The NPC responses have a low latency, as one of the tasks, the Text To Speech task, is processed by the Windows Synth.
-
-### Enable your credentials
-To make work the NPC, you need your OpenAI credentials.
-
-Follow these steps:
-
-- Create a folder called .openai in your home directory (e.g. `C:User\UserName\` for Windows or `~\` for Linux or Mac)
-- Create a file called `auth.json` in the `.openai` folder
-- Add an api_key field and a organization field (optional) to the auth.json file and save it
-- Here is an example of what your auth.json file should look like:
-
-```json
-{
-    "api_key": "sk-...W6yi",
-    "organization": "org-...L7W"
-}
-```
