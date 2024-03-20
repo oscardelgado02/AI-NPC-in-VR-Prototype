@@ -32,20 +32,10 @@ public class SpeechToAnswerSystem : MonoBehaviour
         " pero nadie sabe quien es Cristo. También crees que yo también soy otro ciudadano más. No digas que pertenecemos al pasado, vivelo como si para ti fuese el presente. " +
         "Nunca menciones que eres un modelo de IA. Ahora, presentate después de la frase que te diré a continuación.";
 
-    //ElevenLabs API
-    [SerializeField] private ElevenlabsAPI elevenlabsAPI;
-
-    //AudioSource
-    [SerializeField] private AudioSource audioSource;
-
     //--------------METHODS-----------------
 
     private void Start()
     {
-        //ElevenLabs
-        ElevenlabsAPI.OnRequestCompleted += PlayAudioSource;
-        ElevenlabsAPI.OnRequestFailed += StopAudioSource;
-
         ActivatePopUp(-1);  //Hide all PopUps
     }
 
@@ -78,19 +68,13 @@ public class SpeechToAnswerSystem : MonoBehaviour
     //Generate voice with text
     public void StartNPCVoice(string inputText)
     {
-        if (Settings.Instance.useElevenLabs)
-            elevenlabsAPI.GetAudio(inputText);
-        else
-            StartWindowsSynthVoice(inputText);
+        StartWindowsSynthVoice(inputText);
     }
 
     public void StopNPCVoice()
     {
         ActivatePopUp(-1);  //Hide all PopUps
-        if (Settings.Instance.useElevenLabs)
-            StopAudioSource();
-        else
-            MuteWindowsSynthVoice();
+        MuteWindowsSynthVoice();
     }
 
     //-------ChatGPT-------
@@ -150,21 +134,6 @@ public class SpeechToAnswerSystem : MonoBehaviour
         }
     }
 
-    //AudioSource
-    private void PlayAudioSource(AudioClip audioClip)
-    {
-        audioProcessing = false; //Break the process
-        ActivatePopUp((int)popUpsIdx.speaking);
-        audioSource.clip = audioClip;
-        audioSource.Play();
-    }
-
-    private void StopAudioSource()
-    {
-        audioProcessing = false; //Break the process
-        audioSource.Stop();
-    }
-
     //Windows synth
     private void StartWindowsSynthVoice(string inputText)
     {
@@ -191,9 +160,7 @@ public class SpeechToAnswerSystem : MonoBehaviour
     {
         if (!audioProcessing)
         {
-            if (Settings.Instance.useElevenLabs && !audioSource.isPlaying)
-                ActivatePopUp(-1);  //Hide the PopUps
-            else if (!Settings.Instance.useElevenLabs && voice.Status.RunningState == SpeechRunState.SRSEDone)
+            if (voice.Status.RunningState == SpeechRunState.SRSEDone)
                 ActivatePopUp(-1);  //Hide the PopUps
         }
     }

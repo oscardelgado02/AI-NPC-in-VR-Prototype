@@ -15,8 +15,6 @@ public class BoardInteraction : MonoBehaviour
     [SerializeField] private LayerMask boardLayer; // Layer mask for the board
     [SerializeField] private float interactionDistance = 2.5f;
 
-    [SerializeField] private Button windowsSynthButton;
-    [SerializeField] private Button elevenLabsButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private TMP_Dropdown microDropdown;
 
@@ -27,8 +25,6 @@ public class BoardInteraction : MonoBehaviour
     private void Start()
     {
         //We init the button functions
-        windowsSynthButton.onClick.AddListener(() => ElevenLabsOrWindowsSynth(false));
-        elevenLabsButton.onClick.AddListener(() => ElevenLabsOrWindowsSynth(true));
         exitButton.onClick.AddListener(ExitGame);
 
         //We init the dropdown
@@ -36,7 +32,6 @@ public class BoardInteraction : MonoBehaviour
         microDropdown.value = SearchDropdownIndexByName(PlayerSpeechRecord.microphoneOption);
     }
 
-    public void ElevenLabsOrWindowsSynth(bool status) { Settings.Instance.useElevenLabs = status; }
     public void ExitGame() { Application.Quit(); }
     private void PopulateDropdown()
     {

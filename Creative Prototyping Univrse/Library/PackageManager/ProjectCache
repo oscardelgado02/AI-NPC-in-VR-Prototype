@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638465363186254930
-    m_Hash: 1858745927
+      ticks: 638465513502268807
+    m_Hash: 921073195
   m_LockFileStatus:
     m_FilePath: D:/GitRepositories/Creative-Prototyping-Univrse/Creative Prototyping
       Univrse/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638465363189808725
-    m_Hash: 2236845156
+      ticks: 638465513502268807
+    m_Hash: 537955982
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
