@@ -16,7 +16,7 @@ The NPC has three different states:
 - While it is doing the Speech To Text task, it will show an ear image above its head. While this image is visible, the NPC won't listen the user words.
 
 ![alt text](https://github.com/oscardelgado02/Creative-Prototyping-Univrse/blob/main/Creative%20Prototyping%20Univrse/Assets/Sprites/Listen.png)
-
+<img src="https://github.com/oscardelgado02/Creative-Prototyping-Univrse/blob/main/Creative%20Prototyping%20Univrse/Assets/Sprites/Listen.png" width="128"/>
 - While it is generating the response (ChatGPT), it will show a cloud image above its head. While this image is visible, the NPC won't listen the user words.
 
 ![alt text](https://github.com/oscardelgado02/Creative-Prototyping-Univrse/blob/main/Creative%20Prototyping%20Univrse/Assets/Sprites/Think.png)
