@@ -30,8 +30,6 @@ public class BoardInteraction : MonoBehaviour
         elevenLabsButton.onClick.AddListener(() => ElevenLabsOrWindowsSynth(true));
         exitButton.onClick.AddListener(ExitGame);
 
-        exitButton.onClick.Invoke();
-
         //We init the dropdown
         PopulateDropdown();
         microDropdown.onValueChanged.AddListener(HandleDropdownValueChanged);
