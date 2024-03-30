@@ -2,7 +2,7 @@
 VR prototype developed in Unity where the user can talk to an AI-driven NPC (ChatGPT API).
 
 ### Enable your credentials
-To make work the NPC, you need your OpenAI credentials.
+To make work the NPC, you need your OpenAI credentials. The original plugin I used to make OpenAI API work is from https://github.com/srcnalt/OpenAI-Unity
 
 Follow these steps:
 
