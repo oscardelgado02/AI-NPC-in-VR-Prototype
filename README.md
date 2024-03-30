@@ -33,15 +33,15 @@ The NPC has three different states:
 
 - While it is doing the Speech To Text task, it will show an ear image above its head. While this image is visible, the NPC won't listen the user words.
 
-<img src="https://github.com/oscardelgado02/Creative-Prototyping-Univrse/blob/main/Creative%20Prototyping%20Univrse/Assets/Sprites/Listen.png" width="128"/>
+<img src="https://github.com/oscardelgado02/AI-NPC-in-VR-Prototype/blob/main/Assets/Sprites/Listen.png" width="128"/>
 
 - While it is generating the response (ChatGPT), it will show a cloud image above its head. While this image is visible, the NPC won't listen the user words.
 
-<img src="https://github.com/oscardelgado02/Creative-Prototyping-Univrse/blob/main/Creative%20Prototyping%20Univrse/Assets/Sprites/Think.png" width="128"/>
+<img src="https://github.com/oscardelgado02/AI-NPC-in-VR-Prototype/blob/main/Assets/Sprites/Think.png" width="128"/>
 
 - While it is speaking (Text To Speech), it will show an audio source image above its head. While this image is visible, the NPC will listen the user words, and if the user talks, the NPC will be interrupted.
 
-<img src="https://github.com/oscardelgado02/Creative-Prototyping-Univrse/blob/main/Creative%20Prototyping%20Univrse/Assets/Sprites/Speak.png" width="128"/>
+<img src="https://github.com/oscardelgado02/AI-NPC-in-VR-Prototype/blob/main/Assets/Sprites/Speak.png" width="128"/>
 
 ### NPC Speech to Answer system
 The NPC has three different parts to process the audio from the user and generate an audio answer:
