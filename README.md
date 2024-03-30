@@ -1,4 +1,5 @@
-# Creative Prototyping Univrse
+# AI NPC in VR Prototype
+VR prototype developed in Unity where the user can talk to an AI-driven NPC (ChatGPT API).
 
 ### Enable your credentials
 To make work the NPC, you need your OpenAI credentials.
