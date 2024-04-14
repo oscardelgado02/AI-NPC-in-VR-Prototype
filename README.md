@@ -1,6 +1,10 @@
 # AI NPC in VR Prototype
 VR prototype developed in Unity where the user can talk to an AI-driven NPC (ChatGPT API).
 
+<div align="center">
+<img src="https://github.com/oscardelgado02/oscardelgado02/blob/main/images/AI NPC VR Preview.PNG" align="center" style="width: 80%" />
+</div>
+
 ### Enable your credentials
 To make work the NPC, you need your OpenAI credentials. The original plugin I used to make OpenAI API work is from https://github.com/srcnalt/OpenAI-Unity
 
